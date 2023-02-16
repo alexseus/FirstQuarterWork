@@ -9,7 +9,7 @@ string[] CreateStringArray(int arrayLenght)
     string[] stringArray = new string[arrayLenght];
     for (int i = 0; i < stringArray.Length; i++)
     {
-        Console.Write($"Введите {i} строку массива: ");
+        Console.Write($"Введите {i+1} строку из {arrayLenght} строк массива: ");
         stringArray[i] = Console.ReadLine()!;
     }
     return stringArray;
@@ -31,7 +31,6 @@ void ShowFilteredArray(string[] array, int filterLenght)
     }
     Console.Write("]");
 }
-
 
 string[] srtingArray = CreateStringArray(5);    // формируем запрос массива строк, указывая размер массива
 ShowFilteredArray(srtingArray, 3);              // выводим используя фильтр-длину строки
